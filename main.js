@@ -95,18 +95,26 @@ console.log(resultados);
         Si algún caracter no se encuentra, simplemente lo ignoramos.
 */
 
-let str = 'abcdefghijklmnopqrstuvwxyz';
+const alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'];
 
 function reemplazarLetras(str){
 
-    let alfabeto = str;
-    let nuevoString = ''
-
-    for(let i = 0 ; i < str.lenght ; i++){
+    let letras = str.toLowerCase().split('');
+    let nuevoString = [];
+    let nuevaPosicion;
+    
+    for(let i = 0 ; i < letras.length ; i++){
+        if(alfabeto.indexOf !== -1){
+            nuevaPosicion = alfabeto.indexOf[letras[i]]+1
+        }else{
+            nuevaPosicion = " "
+        }
+        nuevoString.push(nuevaPosicion)
     }
-
+    return nuevoString.join('')
 }
 
+console.log(reemplazarLetras('Me llamo Juan carlos'))
 
 /*
     Crea una función que reciba una serie de arrays como argumentos 
